@@ -13,6 +13,12 @@
       flex-direction: column;
       align-items: flex-end;
       width: 50%;
+
+      .mac {
+        margin-top: 2rem;
+        width: 108%;
+        height: auto;
+      }
     }
 
     .container_left {
@@ -360,7 +366,7 @@
         width: 50%;
 
         .mac {
-          width: 95%;
+          width: 114%;
           height: auto;
         }
       }

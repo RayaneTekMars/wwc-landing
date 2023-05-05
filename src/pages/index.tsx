@@ -17,6 +17,7 @@ import {
   NotificationContainer,
   NotificationManager,
 } from "react-notifications";
+import "react-notifications/lib/notifications.css";
 
 const ibm = IBM_Plex_Sans_Devanagari({
   subsets: ["latin"],
@@ -62,7 +63,7 @@ export default function Home() {
 
     try {
       const docRef = await addDoc(
-        collection(database, "registratioLandingPage"),
+        collection(database, "registrationLandingPage"),
         {
           companyName: formData.companyName,
           city: formData.city,
@@ -123,7 +124,6 @@ export default function Home() {
   };
 
   function handleLoginClick() {
-    //redirect on site : https://pro.worldwideconnexion.com/
     window.location.href = "https://pro.worldwideconnexion.com/";
   }
 
@@ -182,10 +182,10 @@ export default function Home() {
             </div>
             <div className={`${styles.container_right}`}>
               <Image
-                src="/img/mac_iphone_crop.png"
+                src="/img/mac_iphone_crop_new.png"
                 alt="Worldwide Connexion"
-                width={848}
-                height={890}
+                width={1955}
+                height={1623}
                 className={`${styles.mac}`}
               />
             </div>
@@ -194,7 +194,7 @@ export default function Home() {
             <div className={`${styles.app_container}`}>
               <Link href="#">
                 <Image
-                  src="/img/app_store_btn.png"
+                  src="/img/app_store_btn.svg"
                   alt="App Store"
                   width={180}
                   height={52}
@@ -202,7 +202,7 @@ export default function Home() {
               </Link>
               <Link href="#">
                 <Image
-                  src="/img/google_play_btn.png"
+                  src="/img/google_play_btn.svg"
                   alt="Google Play"
                   width={180}
                   height={52}
@@ -301,16 +301,16 @@ export default function Home() {
         </div>
         <div className={`${styles.sixth_page}`}>
           <Image
-            src="/img/1st_formule.png"
+            src="/img/first_formule.png"
             alt="1st formule"
-            width={398}
-            height={556}
+            width={350}
+            height={527}
           />
           <Image
-            src="/img/2nd_formule.png"
+            src="/img/second_formule.png"
             alt="2nd formule"
-            width={398}
-            height={556}
+            width={350}
+            height={527}
           />
         </div>
         <div className={`${styles.form}`} id="joinus">
