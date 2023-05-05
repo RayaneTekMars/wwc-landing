@@ -155,77 +155,79 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <Parallax speed={0} style={{ zIndex: 2, backgroundColor: "#f2f2f2" }}>
-          <div className={`${styles.container}`}>
-            <div className={`${styles.container_left}`}>
-              <Header />
-              <div className={`${styles.title_container}`}>
-                <h1 className={`${styles.title} ${ibm.className}`}>
-                  The world of art <br />
-                  has never been this close
-                </h1>
-                <p className={`${styles.subtitle} ${ibm.className}`}>
-                  Share any happening in your physical space with the best{" "}
-                  <br />
-                  community. In 3 clicks, add your exhibitions directly in{" "}
-                  <br />
-                  the map.
-                </p>
+          <div className={`${styles.group_container}`}>
+            <div className={`${styles.container}`}>
+              <div className={`${styles.container_left}`}>
+                <Header />
+                <div className={`${styles.title_container}`}>
+                  <h1 className={`${styles.title} ${ibm.className}`}>
+                    The world of art <br />
+                    has never been this close
+                  </h1>
+                  <p className={`${styles.subtitle} ${ibm.className}`}>
+                    Share any happening in your physical space with the best{" "}
+                    <br />
+                    community. In 3 clicks, add your exhibitions directly in{" "}
+                    <br />
+                    the map.
+                  </p>
+                </div>
+                <div className={`${styles.button_container}`}>
+                  <button
+                    className={`${styles.button_login} ${ibm.className}`}
+                    onClick={handleLoginClick}
+                  >
+                    Log in
+                  </button>
+                  <button
+                    className={`${styles.button_joinus} ${ibm.className}`}
+                    onClick={handleJoinusClick}
+                  >
+                    Join us
+                  </button>
+                </div>
               </div>
-              <div className={`${styles.button_container}`}>
-                <button
-                  className={`${styles.button_login} ${ibm.className}`}
-                  onClick={handleLoginClick}
-                >
-                  Log in
-                </button>
-                <button
-                  className={`${styles.button_joinus} ${ibm.className}`}
-                  onClick={handleJoinusClick}
-                >
-                  Join us
-                </button>
+              <div className={`${styles.container_right}`}>
+                <Image
+                  src="/img/mac_iphone_crop_new.png"
+                  alt="Worldwide Connexion"
+                  width={1955}
+                  height={1623}
+                  className={`${styles.mac}`}
+                />
               </div>
             </div>
-            <div className={`${styles.container_right}`}>
-              <Image
-                src="/img/mac_iphone_crop_new.png"
-                alt="Worldwide Connexion"
-                width={1955}
-                height={1623}
-                className={`${styles.mac}`}
-              />
-            </div>
-          </div>
-          <div className={`${styles.footer_first}`}>
-            <div className={`${styles.app_container}`}>
-              <Link href="#">
+            <div className={`${styles.footer_first}`}>
+              <div className={`${styles.app_container}`}>
+                <Link href="#">
+                  <Image
+                    src="/img/app_store_btn.svg"
+                    alt="App Store"
+                    width={180}
+                    height={52}
+                  />
+                </Link>
+                <Link href="#">
+                  <Image
+                    src="/img/google_play_btn.svg"
+                    alt="Google Play"
+                    width={180}
+                    height={52}
+                  />
+                </Link>
+              </div>
+              <button
+                className={`${styles.button_scroll}`}
+                onClick={handleScrollClick}
+              >
                 <Image
-                  src="/img/app_store_btn.svg"
-                  alt="App Store"
-                  width={180}
-                  height={52}
+                  src="/img/arrow_down.png"
+                  alt="Scroll down"
+                  width={40}
+                  height={40}
                 />
-              </Link>
-              <Link href="#">
-                <Image
-                  src="/img/google_play_btn.svg"
-                  alt="Google Play"
-                  width={180}
-                  height={52}
-                />
-              </Link>
+              </button>
             </div>
-            <button
-              className={`${styles.button_scroll}`}
-              onClick={handleScrollClick}
-            >
-              <Image
-                src="/img/arrow_down.png"
-                alt="Scroll down"
-                width={40}
-                height={40}
-              />
-            </button>
           </div>
         </Parallax>
         <Parallax speed={-20} style={{ zIndex: 1 }}>

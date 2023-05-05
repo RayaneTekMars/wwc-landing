@@ -4,110 +4,116 @@
   min-height: 100vh;
   background-color: #f2f2f2;
 
-  .container {
-    display: flex;
-    flex-direction: row;
-
-    .container_right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      width: 50%;
-
-      .mac {
-        margin-top: 2rem;
-        width: 108%;
-        height: auto;
-      }
-    }
-
-    .container_left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 50%;
-
-      .title_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 12rem;
-        margin-bottom: 6rem;
-        width: auto;
-        height: 50%;
-
-        .title {
-          color: #000000;
-          font-size: 2.7rem;
-          font-weight: 400;
-          margin-bottom: 1rem;
-        }
-
-        .subtitle {
-          color: #868686;
-          font-size: 1.3rem;
-          font-weight: 200;
-        }
-      }
-
-      .button_container {
-        display: flex;
-        flex-direction: row;
-        width: 22%;
-        justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
-
-        .button_login {
-          border: none;
-          display: flex;
-          width: auto;
-          background-color: #f2f2f2;
-          color: #000000;
-          font-size: 1.2rem;
-          font-weight: 500;
-          cursor: pointer;
-        }
-
-        .button_joinus {
-          border-radius: 0.5rem;
-          border-color: #000000;
-          border-style: solid;
-          display: flex;
-          width: auto;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-          background-color: #000000;
-          color: #ffffff;
-          font-size: 1.2rem;
-          font-weight: 500;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  .footer_first {
+  .group_container {
     display: flex;
     flex-direction: column;
-
-    .button_scroll {
-      align-self: flex-end;
-      margin-left: auto;
-      margin-right: auto;
-      // disable styling
-      border: none;
-      background-color: #f2f2f2;
-      cursor: pointer;
-    }
-
-    .app_container {
+    height: 100vh;
+    .container {
       display: flex;
       flex-direction: row;
-      width: 20%;
-      margin-left: 2rem;
-      margin-top: -0.8rem;
-      justify-content: space-between;
+      height: 92vh;
+
+      .container_right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50%;
+
+        .mac {
+          margin-top: 2rem;
+          width: 108%;
+          height: auto;
+        }
+      }
+
+      .container_left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+
+        .title_container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 12rem;
+          margin-bottom: 6rem;
+          width: auto;
+          height: 50%;
+
+          .title {
+            color: #000000;
+            font-size: 2.7rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+
+          .subtitle {
+            color: #868686;
+            font-size: 1.3rem;
+            font-weight: 200;
+          }
+        }
+
+        .button_container {
+          display: flex;
+          flex-direction: row;
+          width: 22%;
+          justify-content: space-between;
+          margin-left: auto;
+          margin-right: auto;
+
+          .button_login {
+            border: none;
+            display: flex;
+            width: auto;
+            background-color: #f2f2f2;
+            color: #000000;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          .button_joinus {
+            border-radius: 0.5rem;
+            border-color: #000000;
+            border-style: solid;
+            display: flex;
+            width: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .footer_first {
+      display: flex;
+      flex-direction: column;
+
+      .button_scroll {
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: auto;
+        // disable styling
+        border: none;
+        background-color: #f2f2f2;
+        cursor: pointer;
+      }
+
+      .app_container {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        margin-left: 2rem;
+        margin-top: -0.8rem;
+        justify-content: space-between;
+      }
     }
   }
 
@@ -355,83 +361,86 @@
 
 @media (max-width: 1600px) {
   .main {
-    .container {
-      display: flex;
-      flex-direction: row;
-
-      .container_right {
+    .group_container {
+      .container {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 50%;
+        flex-direction: row;
+        height: 90vh;
 
-        .mac {
-          width: 114%;
-          height: auto;
-        }
-      }
-
-      .container_left {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 50%;
-
-        .title_container {
+        .container_right {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          margin-left: 6rem;
-          margin-bottom: 6rem;
-          width: auto;
-          height: 50%;
+          align-items: flex-end;
+          width: 50%;
 
-          .title {
-            color: #000000;
-            font-size: 2.7rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-          }
-
-          .subtitle {
-            color: #868686;
-            font-size: 1.3rem;
-            font-weight: 200;
+          .mac {
+            width: 114%;
+            height: auto;
           }
         }
 
-        .button_container {
+        .container_left {
           display: flex;
-          flex-direction: row;
-          width: 30%;
-          justify-content: space-between;
-          margin-left: auto;
-          margin-right: auto;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 50%;
 
-          .button_login {
-            border: none;
+          .title_container {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 6rem;
+            margin-bottom: 6rem;
             width: auto;
-            background-color: #f2f2f2;
-            color: #000000;
-            font-size: 1.2rem;
-            font-weight: 500;
-            cursor: pointer;
+            height: 50%;
+
+            .title {
+              color: #000000;
+              font-size: 2.7rem;
+              font-weight: 400;
+              margin-bottom: 1rem;
+            }
+
+            .subtitle {
+              color: #868686;
+              font-size: 1.3rem;
+              font-weight: 200;
+            }
           }
 
-          .button_joinus {
-            border-radius: 0.5rem;
-            border-color: #000000;
-            border-style: solid;
+          .button_container {
             display: flex;
-            width: auto;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            background-color: #000000;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: 500;
-            cursor: pointer;
+            flex-direction: row;
+            width: 30%;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+
+            .button_login {
+              border: none;
+              display: flex;
+              width: auto;
+              background-color: #f2f2f2;
+              color: #000000;
+              font-size: 1.2rem;
+              font-weight: 500;
+              cursor: pointer;
+            }
+
+            .button_joinus {
+              border-radius: 0.5rem;
+              border-color: #000000;
+              border-style: solid;
+              display: flex;
+              width: auto;
+              padding-left: 1.5rem;
+              padding-right: 1.5rem;
+              background-color: #000000;
+              color: #ffffff;
+              font-size: 1.2rem;
+              font-weight: 500;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -507,12 +516,16 @@
     align-items: center;
     background-color: #f2f2f2;
 
-    .container {
+    .group_container {
       display: none;
-    }
 
-    .footer_first {
-      display: none;
+      .container {
+        display: none;
+      }
+
+      .footer_first {
+        display: none;
+      }
     }
 
     .second_page {
@@ -551,7 +564,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100vh;
 
       .logo,
       .mac_iphone {
