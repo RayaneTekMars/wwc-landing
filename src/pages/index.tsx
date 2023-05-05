@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Head from "next/head";
 import { IBM_Plex_Sans_Devanagari } from "next/font/google";
 import styles from "../styles/Home.module.scss";
@@ -8,16 +9,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
 import { Button, FormControl, Input } from "@mui/material";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import { useState } from "react";
 import { ThemeProvider } from "@emotion/react";
 import buttonTheme from "@/styles/theme";
 import { collection, addDoc } from "firebase/firestore";
 import { database } from "@/config/firebase";
-import {
-  NotificationContainer,
-  NotificationManager,
-} from "react-notifications";
-import "react-notifications/lib/notifications.css";
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const ibm = IBM_Plex_Sans_Devanagari({
   subsets: ["latin"],
@@ -25,28 +30,20 @@ const ibm = IBM_Plex_Sans_Devanagari({
 });
 
 export default function Home() {
+  const [state, setState] = useState({
+    open: false,
+    vertical: "top" as const,
+    horizontal: "center" as const,
+  });
+
+  const { vertical, horizontal, open } = state;
+
   const [formData, setFormData] = useState({
     companyName: "",
     website: "",
     city: "",
     email: "",
   });
-
-  const createNotification = (type: string) => {
-    switch (type) {
-      case "success":
-        NotificationManager.success(
-          "Your information has successfully been registered",
-          "Success"
-        );
-        break;
-      case "error":
-        NotificationManager.error("There was an error", "Error", 5000, () => {
-          alert("callback");
-        });
-        break;
-    }
-  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -72,11 +69,20 @@ export default function Home() {
         }
       );
       console.log("Document written with ID: ", docRef.id);
-      createNotification("success");
+      setState({ ...state, open: true });
     } catch (e) {
       console.error("Error adding document: ", e);
-      createNotification("error");
     }
+    setFormData({
+      companyName: "",
+      website: "",
+      city: "",
+      email: "",
+    });
+  };
+
+  const handleClose = () => {
+    setState({ ...state, open: false });
   };
 
   const isFormValid = () => {
@@ -402,6 +408,17 @@ export default function Home() {
                 Register
               </Button>
             </ThemeProvider>
+            <Snackbar
+              anchorOrigin={{ vertical, horizontal }}
+              open={open}
+              autoHideDuration={6000}
+              onClose={handleClose}
+              key={horizontal + vertical}
+            >
+              <Alert onClose={handleClose} severity="success">
+                Your registration has been sent!
+              </Alert>
+            </Snackbar>
           </FormControl>
           <p className={`${ibm.className} ${styles.desc}`}>
             In order to offer a quality service to our users, your submission
@@ -426,7 +443,6 @@ export default function Home() {
             Copyright 2023 Worldwide Connexion
           </p>
         </div>
-        <NotificationContainer />
         <div className={`${styles.mobile_view}`}>
           <Image
             src="/img/logo_mobile.png"
@@ -453,23 +469,23 @@ export default function Home() {
             Access the website on a computer
           </p>
           <div className={`${styles.app_container}`}>
-              <Link href="#">
-                <Image
-                  src="/img/app_store_btn.png"
-                  alt="App Store"
-                  width={150}
-                  height={43}
-                />
-              </Link>
-              <Link href="#">
-                <Image
-                  src="/img/google_play_btn.png"
-                  alt="Google Play"
-                  width={150}
-                  height={43}
-                />
-              </Link>
-            </div>
+            <Link href="#">
+              <Image
+                src="/img/app_store_btn.png"
+                alt="App Store"
+                width={150}
+                height={43}
+              />
+            </Link>
+            <Link href="#">
+              <Image
+                src="/img/google_play_btn.png"
+                alt="Google Play"
+                width={150}
+                height={43}
+              />
+            </Link>
+          </div>
         </div>
       </main>
     </>
