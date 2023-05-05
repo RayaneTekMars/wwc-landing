@@ -230,7 +230,7 @@ export default function Home() {
             </div>
           </div>
         </Parallax>
-        <Parallax speed={-20} style={{ zIndex: 1 }}>
+        <Parallax speed={-50} style={{ zIndex: 1 }}>
           <div className={`${styles.second_page}`} id="second_page">
             <p className={`${styles.second_page_title} ${ibm.className}`}>
               The first platform bringing together <br />
