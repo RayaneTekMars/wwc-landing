@@ -11,13 +11,13 @@ export default class MyDocument extends Document<MyDocumentProps> {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          {this.props.emotionStyleTags}
-        </Head>
-        <body style={{
-          margin: 0,
-          padding: 0,
-        }}>
+        <Head>{this.props.emotionStyleTags}</Head>
+        <body
+          style={{
+            margin: 0,
+            padding: 0,
+          }}
+        >
           <Main />
           <NextScript />
         </body>
