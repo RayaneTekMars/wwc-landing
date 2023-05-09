@@ -102,7 +102,8 @@
         margin-right: auto;
         // disable styling
         border: none;
-        background-color: #f2f2f2;
+        // no background
+        background-color: transparent;
         cursor: pointer;
       }
 
@@ -187,33 +188,46 @@
     }
   }
 
-  .fourth_page {
+  .fourth_page2 {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    margin-top: -20vh;
-  }
+    background-color: #f2f2f2;
 
-  .blackbox {
-    background-color: #000000;
-    width: 100%;
-    padding: 10rem 0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .first_title {
-      color: #9c9c9c;
-      font-size: 2rem;
-      font-weight: 200;
-      margin-bottom: 3rem;
+    .fourth_page {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      z-index: 2;
+      background-image: url("/img/background_page3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
     }
-
-    .second_title {
-      color: #ffffff;
-      font-size: 2rem;
-      font-weight: 200;
+  
+    .blackbox {
+      background-color: #000000;
+      width: 100%;
+      padding: 10rem 0rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      height: 50vh;
+  
+      .first_title {
+        color: #9c9c9c;
+        font-size: 2rem;
+        font-weight: 200;
+        margin-bottom: 3rem;
+      }
+  
+      .second_title {
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 200;
+      }
     }
   }
 
@@ -473,22 +487,16 @@
       }
     }
 
-    .fourth_page {
-      margin-top: -10vh;
-
-      .background {
-        width: 100%;
-        height: auto;
+    .fourth_page2 {
+      .blackbox {
+        .second_title {
+          color: #ffffff;
+          font-size: 1.8rem;
+          font-weight: 200;
+        }
       }
     }
 
-    .blackbox {
-      .second_title {
-        color: #ffffff;
-        font-size: 1.8rem;
-        font-weight: 200;
-      }
-    }
 
     .fifth_page {
       display: flex;
@@ -539,7 +547,7 @@
       display: none;
     }
 
-    .fourth_page {
+    .fourth_page2 {
       display: none;
     }
 

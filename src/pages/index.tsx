@@ -256,44 +256,46 @@ export default function Home() {
           </div>
           <div className={`${styles.right_container}`}>
             <Image
-              src="/img/ipad_iphone.png"
+              src="/img/ipad_iphone_new.png"
               alt="Phone"
               width={726}
-              height={903}
+              height={955}
               className={`${styles.ipad}`}
             />
           </div>
         </div>
-        <div className={`${styles.fourth_page}`}>
-          <Image
-            src="/img/background_page3.jpg"
-            alt="Background"
-            width={2060}
-            height={1440}
-            className={`${styles.background}`}
-          ></Image>
-        </div>
-        <div className={`${styles.blackbox}`}>
-          <p className={`${ibm.className} ${styles.first_title}`}>
-            What users expect from our platform
-          </p>
-          <p className={`${ibm.className} ${styles.second_title}`}>
-            “Better discover the world of art, make connections and give art
-            places/events more presence online”
-          </p>
+        <div className={`${styles.fourth_page2}`}>
+          <div className={`${styles.fourth_page}`}>
+            {/* <Image
+              src="/img/background_page3.jpg"
+              alt="Background"
+              width={2060}
+              height={1440}
+              className={`${styles.background}`}
+            ></Image> */}
+          </div>
+          <div className={`${styles.blackbox}`}>
+            <p className={`${ibm.className} ${styles.first_title}`}>
+              What users expect from our platform
+            </p>
+            <p className={`${ibm.className} ${styles.second_title}`}>
+              “Better discover of the world of art, make connections and give art
+              places/events more presence online”
+            </p>
+          </div>
         </div>
         <div className={`${styles.fifth_page}`}>
           <h1 className={`${ibm.className} ${styles.title}`}>Our mission</h1>
           <div className={`${styles.texts_container}`}>
             <p className={`${ibm.className}`}>
               Build a bridge <br />
-              between art professional <br />
+              between art professionals <br />
               and art lovers
             </p>
             <p className={`${ibm.className}`}>
               To help small, medium <br />
               and large galleries <br />
-              to increase their sale
+              to increase their sales
             </p>
             <p className={`${ibm.className}`}>
               To create a safe place <br />
@@ -309,13 +311,13 @@ export default function Home() {
         </div>
         <div className={`${styles.sixth_page}`}>
           <Image
-            src="/img/first_formule.png"
+            src="/img/39_doll.svg"
             alt="1st formule"
             width={350}
             height={527}
           />
           <Image
-            src="/img/second_formule.png"
+            src="/img/89_doll.svg"
             alt="2nd formule"
             width={350}
             height={527}
@@ -435,7 +437,7 @@ export default function Home() {
           </p>
         </div>
         <div className={`${styles.footer}`}>
-          <Link href={"#"}>
+          <Link href={"/tos"}>
             <p className={`${ibm.className}`}>Terms and conditions</p>
           </Link>
           <p className={`${ibm.className}`}>
