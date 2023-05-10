@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import { IBM_Plex_Sans_Devanagari } from "next/font/google";
 import styles from "../styles/Home.module.scss";
@@ -35,6 +35,27 @@ export default function Home() {
     vertical: "top" as const,
     horizontal: "center" as const,
   });
+
+  const joinUsRef = useRef(null);
+  const secondPageRef = useRef(null);
+
+  const handleJoinusClick = () => {
+    const joinUsElement = document.getElementById("joinus");
+    if (!joinUsElement) return;
+    const boundingClientRect = joinUsElement.getBoundingClientRect();
+    if (!boundingClientRect) return;
+    const y = boundingClientRect.top + window.pageYOffset - 100;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };  
+
+  const handleSecondPageClick = () => {
+    const secondPageElement = document.getElementById("secondPage");
+    if (!secondPageElement) return;
+    const boundingClientRect = secondPageElement.getBoundingClientRect();
+    if (!boundingClientRect) return;
+    const y = boundingClientRect.top + window.pageYOffset + 500;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
 
   const { vertical, horizontal, open } = state;
 
@@ -133,18 +154,6 @@ export default function Home() {
     window.location.href = "https://pro.worldwideconnexion.com/";
   }
 
-  function handleJoinusClick() {
-    const joinus_section = document.getElementById("joinus") as HTMLElement;
-    joinus_section.scrollIntoView({ behavior: "smooth" });
-  }
-
-  function handleScrollClick() {
-    const scroll_section = document.getElementById(
-      "second_page"
-    ) as HTMLElement;
-    scroll_section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
   return (
     <>
       <Head>
@@ -218,7 +227,7 @@ export default function Home() {
               </div>
               <button
                 className={`${styles.button_scroll}`}
-                onClick={handleScrollClick}
+                onClick={handleSecondPageClick}
               >
                 <Image
                   src="/img/arrow_down.png"
@@ -231,7 +240,7 @@ export default function Home() {
           </div>
         </Parallax>
         <Parallax speed={-50} style={{ zIndex: 1 }}>
-          <div className={`${styles.second_page}`} id="second_page">
+          <div className={`${styles.second_page}`} ref={secondPageRef} id="secondPage">
             <p className={`${styles.second_page_title} ${ibm.className}`}>
               The first platform bringing together <br />
               artists and art professionals
@@ -323,7 +332,7 @@ export default function Home() {
             height={527}
           />
         </div>
-        <div className={`${styles.form}`} id="joinus">
+        <div className={`${styles.form}`} ref={joinUsRef} id="joinus">
           <FormControl>
             <p className={`${ibm.className} ${styles.title}`}>Join us here:</p>
             <Input
