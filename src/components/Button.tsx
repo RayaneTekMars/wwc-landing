@@ -7,12 +7,16 @@ interface ButtonProps {
   className?: string
 }
 
-const CustomButton = forwardRef<HTMLDivElement, ButtonProps>(({ content, onClick = () => {}, className }: ButtonProps, ref) => (
-  <div className={className} ref={ref} onClick={onClick} role='button'>
-    <span>{content}</span>
-  </div>
-))
+const CustomButton = forwardRef<HTMLDivElement, ButtonProps>(function CustomButton({ content, onClick = () => {}, className }: ButtonProps, ref) {
+  return (
+    <div className={className} ref={ref} onClick={onClick} role='button'>
+      <span>{content}</span>
+    </div>
+  )
+})
+
+CustomButton.displayName = 'CustomButton'
 
 export {
-    CustomButton
+  CustomButton
 }
