@@ -2,13 +2,13 @@
 
 import React, { useRef } from "react";
 import Head from "next/head";
-import { IBM_Plex_Sans_Devanagari } from "next/font/google";
+import { IBM_Plex_Sans_Devanagari, Inter } from "next/font/google";
 import styles from "../styles/Home.module.scss";
 import Header from "../components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
-import { Button, FormControl, Input } from "@mui/material";
+import { Button, FormControl, Input, Typography } from "@mui/material";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import { useState } from "react";
@@ -16,6 +16,7 @@ import { ThemeProvider } from "@emotion/react";
 import buttonTheme from "@/styles/theme";
 import { collection, addDoc } from "firebase/firestore";
 import { database } from "@/config/firebase";
+import { CustomButton } from "../components/Button";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
@@ -25,6 +26,11 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 });
 
 const ibm = IBM_Plex_Sans_Devanagari({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
+
+const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
@@ -46,7 +52,16 @@ export default function Home() {
     if (!boundingClientRect) return;
     const y = boundingClientRect.top + window.pageYOffset - 100;
     window.scrollTo({ top: y, behavior: "smooth" });
-  };  
+  };
+
+  const handleJoinusClickMobile = () => {
+    const joinUsElement = document.getElementById("joinus_mobile");
+    if (!joinUsElement) return;
+    const boundingClientRect = joinUsElement.getBoundingClientRect();
+    if (!boundingClientRect) return;
+    const y = boundingClientRect.top + window.pageYOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
 
   const handleSecondPageClick = () => {
     const secondPageElement = document.getElementById("secondPage");
@@ -457,47 +472,251 @@ export default function Home() {
           </p>
         </div>
         <div className={`${styles.mobile_view}`}>
-          <Image
-            src="/img/logo_mobile.png"
-            alt="Worldwide Connexion"
-            width={57}
-            height={40}
-            className={styles.logo}
-          />
-          <p className={`${ibm.className} ${styles.logo_txt}`}>
-            Worldwide Connexion
-          </p>
-          <h1 className={`${ibm.className} ${styles.title}`}>
-            The world of art <br />
-            has never been this close
-          </h1>
-          <Image
-            src="/img/mac_iphone_mobile.png"
-            alt="Worldwide Connexion"
-            width={280}
-            height={233}
-            className={styles.mac_iphone}
-          />
-          <p className={`${ibm.className} ${styles.desc}`}>
-            Access the website on a computer
-          </p>
-          <div className={`${styles.app_container}`}>
-            <Link href="#">
-              <Image
-                src="/img/app_store_btn.png"
-                alt="App Store"
-                width={150}
-                height={43}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/img/google_play_btn.png"
-                alt="Google Play"
-                width={150}
-                height={43}
-              />
-            </Link>
+          <div className={`${styles.first_page_mobile}`}>
+            <Image
+              src="/img/logo_wwc.svg"
+              alt="Logo"
+              width={197}
+              height={52}
+              className={`${styles.logo}`}
+            />
+            <Typography className={`${ibm.className} ${styles.title}`}>
+              The world of art <br />
+              has never been this close
+            </Typography>
+            <Image
+              src="/img/mac_iphone_mobile.png"
+              alt="Worldwide Connexion"
+              width={280}
+              height={233}
+              className={styles.mac_iphone}
+            />
+            <div className={`${styles.buttons_container}`}>
+              <CustomButton content="Log in" className={`${styles.login_button} ${inter.className}`} onClick={handleLoginClick} />
+              <CustomButton content="Join us" className={`${styles.joinus_button} ${inter.className}`} onClick={handleJoinusClickMobile} />
+            </div>
+            <Typography className={`${ibm.className} ${styles.desc}`}>
+              Share any happening in your physical space <br />
+              with the best community. <br />
+              In 3 clicks, add your exhibitions directly in the map.
+            </Typography>
+            <div className={`${styles.app_buttons}`}>
+              <Link href="#">
+                <Image
+                  src="/img/app_store_btn.svg"
+                  alt="App Store"
+                  width={150}
+                  height={43}
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src="/img/google_play_btn.svg"
+                  alt="Google Play"
+                  width={150}
+                  height={43}
+                />
+              </Link>
+            </div>
+          </div>
+          <div className={`${styles.second_page_mobile}`}>
+            <Typography className={`${ibm.className} ${styles.title}`}>
+              The first platform bringing together <br />
+              artists and art professionals
+            </Typography>
+          </div>
+          <div className={`${styles.third_page_mobile}`}>
+            <Typography className={`${ibm.className} ${styles.title}`}>
+              Share with potentials <br />
+              clients from <br />
+              all around the world
+            </Typography>
+            <Image
+              src="/img/ipad_iphone_new.png"
+              alt="Worldwide Connexion"
+              width={341}
+              height={449}
+              className={styles.ipad_iphone}
+            />
+            <Typography className={`${ibm.className} ${styles.desc}`}>
+              To attract simple visitors or collectors, or to create a<br />
+              community around your gallery. You have the <br />
+              choice. Allow potential clients to be aware of any <br />
+              news happening in your space.
+            </Typography>
+          </div>
+          <div className={`${styles.fourth_page_mobile}`}>
+            <Image
+              src="/img/background_page3.jpg"
+              alt="Worldwide Connexion"
+              width={566}
+              height={378}
+              className={styles.background_page3}
+            />
+            <div className={`${styles.text_container}`}>
+              <Typography className={`${ibm.className} ${styles.title}`}>
+                What users expect from our platform
+              </Typography>
+              <Typography className={`${ibm.className} ${styles.desc}`}>
+                “Better discover of the world of art, make connections and <br />
+                give art places/events more presence online”
+              </Typography>
+            </div>
+          </div>
+          <div className={`${styles.fifth_page_mobile}`}>
+            <Typography className={`${ibm.className} ${styles.title}`}>
+              Our mission
+            </Typography>
+            <Typography className={`${ibm.className} ${styles.desc}`}>
+              Build a bridge <br />
+              between art professionals <br />
+              and art lovers
+            </Typography>
+            <Typography className={`${ibm.className} ${styles.desc}`}>
+              To help small, medium <br />
+              and large galleries <br />
+              to increase their sales
+            </Typography>
+            <Typography className={`${ibm.className} ${styles.desc}`}>
+              To create a safe place <br />
+              for artists around the world
+            </Typography>
+            <Typography className={`${ibm.className} ${styles.quote}`}>
+              “Ce qui rapproche, ce n’est pas la communauté des <br />
+              opinions, c’est la consanguinité des esprits” <br />
+              <br />
+              Marcel Proust
+            </Typography>
+          </div>
+          <div className={`${styles.sixth_page_mobile}`}>
+            <div className={`${styles.form_mobile}`} ref={joinUsRef} id="joinus_mobile">
+              <FormControl>
+                <Typography className={`${ibm.className} ${styles.title}`}>Join us here:</Typography>
+                <Input
+                  placeholder="Company name"
+                  type="text"
+                  name="companyName"
+                  value={formData.companyName}
+                  id="companyName"
+                  onChange={handleChange}
+                  className={
+                    !isNameValid() && !isFieldEmpty(formData.companyName)
+                      ? styles.invalid_input
+                      : styles.input
+                  }
+                  disableUnderline={true}
+                  inputProps={{ required: true }}
+                />
+                <Input
+                  placeholder="Website"
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  id="website"
+                  onChange={handleChange}
+                  className={
+                    !isWebsiteValid() && !isFieldEmpty(formData.website)
+                      ? styles.invalid_input
+                      : styles.input
+                  }
+                  disableUnderline={true}
+                  inputProps={{ required: true }}
+                />
+                {!isWebsiteValid() && !isFieldEmpty(formData.website) ? (
+                  <p className={`${styles.invalid_text} ${ibm.className}`}>
+                    example: https://www.example.com
+                  </p>
+                ) : null}
+                <Input
+                  placeholder="City"
+                  type="text"
+                  name="city"
+                  value={formData.city}
+                  id="city"
+                  onChange={handleChange}
+                  className={
+                    !isCityValid() && !isFieldEmpty(formData.city)
+                      ? styles.invalid_input
+                      : styles.input
+                  }
+                  disableUnderline={true}
+                  inputProps={{ required: true }}
+                />
+                <Input
+                  placeholder="Contact email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  id="email"
+                  onChange={handleChange}
+                  className={
+                    !isEmailValid() && !isFieldEmpty(formData.email)
+                      ? styles.invalid_input
+                      : styles.input
+                  }
+                  disableUnderline={true}
+                  inputProps={{ required: true }}
+                />
+                {!isEmailValid() && !isFieldEmpty(formData.email) ? (
+                  <p className={`${styles.invalid_text} ${ibm.className}`}>
+                    example: contact@example.com
+                  </p>
+                ) : null}
+                <ThemeProvider theme={buttonTheme}>
+                  <Button
+                    variant="contained"
+                    className={styles.button}
+                    onClick={handleClickRegister}
+                    disabled={
+                      !isFormValid() ||
+                      !isEmailValid() ||
+                      !isWebsiteValid() ||
+                      !isNameValid() ||
+                      !isCityValid()
+                    }
+                  >
+                    Register
+                  </Button>
+                </ThemeProvider>
+                <Snackbar
+                  anchorOrigin={{ vertical, horizontal }}
+                  open={open}
+                  autoHideDuration={6000}
+                  onClose={handleClose}
+                  key={horizontal + vertical}
+                >
+                  <Alert onClose={handleClose} severity="success">
+                    Your registration has been sent!
+                  </Alert>
+                </Snackbar>
+              </FormControl>
+              <Typography className={`${ibm.className} ${styles.desc}`}>
+                In order to offer a quality service to our users, your <br />
+                submission will firstly need a quick verification <br />
+                before being able to access the platform, here is <br />
+                the process.
+                <br />
+              </Typography>
+              <Typography className={`${ibm.className} ${styles.list}`}>
+                1. Register. <br />
+                2. After the verification we will contact you in the <br /> following days.
+                <br />
+                3. Ready for subscription
+              </Typography>
+            </div>
+            <div className={`${styles.footer_mobile}`}>
+              <Link href="/tos">
+                <Typography className={`${ibm.className} ${styles.footer_text}`}>
+                  Terms and conditions
+                </Typography>
+              </Link>
+              <Typography className={`${ibm.className} ${styles.footer_text}`}>
+                contact us : contact@worldwideconnexion.com
+              </Typography>
+              <Typography className={`${ibm.className} ${styles.footer_text}`}>
+                © 2023 Worldwide Connexion. All rights reserved.
+              </Typography>
+            </div>
           </div>
         </div>
       </main>
