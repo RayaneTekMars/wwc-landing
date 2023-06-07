@@ -704,19 +704,19 @@ export default function Home() {
                 3. Ready for subscription
               </Typography>
             </div>
-            <div className={`${styles.footer_mobile}`}>
-              <Link href="/tos">
-                <Typography className={`${ibm.className} ${styles.footer_text}`}>
-                  Terms and conditions
-                </Typography>
-              </Link>
+          </div>
+          <div className={`${styles.footer_mobile}`}>
+            <Link href="/tos">
               <Typography className={`${ibm.className} ${styles.footer_text}`}>
-                contact us : contact@worldwideconnexion.com
+                Terms and conditions
               </Typography>
-              <Typography className={`${ibm.className} ${styles.footer_text}`}>
-                © 2023 Worldwide Connexion. All rights reserved.
-              </Typography>
-            </div>
+            </Link>
+            <Typography className={`${ibm.className} ${styles.footer_text}`}>
+              contact us : contact@worldwideconnexion.com
+            </Typography>
+            <Typography className={`${ibm.className} ${styles.footer_text}`}>
+              © 2023 Worldwide Connexion. All rights reserved.
+            </Typography>
           </div>
         </div>
       </main>

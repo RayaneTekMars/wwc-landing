@@ -649,6 +649,7 @@
           justify-content: space-between;
           width: 85vw;
           margin-top: 2rem;
+          margin-bottom: 2rem;
         }
       }
 
@@ -704,14 +705,14 @@
       .fourth_page_mobile {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 70vh;
         width: 100vw;
         align-items: center;
 
         .text_container {
           background-color: #000000;
           width: 100vw;
-          height: 100vh;
+          height: 18vh;
 
           .title {
             font-size: 1.2rem;
@@ -737,7 +738,7 @@
       .fifth_page_mobile {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         align-items: center;
         
@@ -776,7 +777,7 @@
       .sixth_page_mobile {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 90vh;
         width: 100vw;
 
         .form_mobile {
@@ -867,21 +868,22 @@
             margin-top: 1rem;
           }
         }
+      }
 
-        .footer_mobile {
-          background-color: #000000;
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+      .footer_mobile {
+        background-color: #000000;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
 
-          .footer_text {
-            font-size: 0.8rem;
-            font-weight: 400;
-            line-height: 25px;
-          }
+        .footer_text {
+          font-size: 0.8rem;
+          font-weight: 400;
+          line-height: 25px;
         }
       }
     }
