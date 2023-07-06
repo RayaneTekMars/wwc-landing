@@ -98,10 +98,32 @@ export default function Home() {
       const docRef = await addDoc(
         collection(database, "registrationLandingPage"),
         {
-          companyName: formData.companyName,
-          city: formData.city,
-          website: formData.website,
-          email: formData.email,
+          to: "pro@worldwideconnexion.com",
+          message: {
+            subject: "New registration from " + formData.companyName,
+            html: `
+            <div style="font-family: Arial, sans-serif; color: #333;">
+                <h2 style="color: #5a5a5a;">New Registration Details</h2>
+                <hr>
+                <p>
+                    <strong style="color: #333;">Company name:</strong>
+                    <span style="color: #777;">${formData.companyName}</span>
+                </p>
+                <p>
+                    <strong style="color: #333;">Website:</strong>
+                    <a style="color: #1a0dab; text-decoration: none;" href="${formData.website}">${formData.website}</a>
+                </p>
+                <p>
+                    <strong style="color: #333;">City:</strong>
+                    <span style="color: #777;">${formData.city}</span>
+                </p>
+                <p>
+                    <strong style="color: #333;">Email:</strong>
+                    <a style="color: #1a0dab; text-decoration: none;" href="mailto:${formData.email}">${formData.email}</a>
+                </p>
+            </div>`,
+          }
+
         }
       );
       console.log("Document written with ID: ", docRef.id);
@@ -280,7 +302,7 @@ export default function Home() {
           </div>
           <div className={`${styles.right_container}`}>
             <Image
-              src="/img/ipad_iphone_new.png"
+              src="/img/ipadiphone.png"
               alt="Phone"
               width={726}
               height={955}
@@ -332,20 +354,6 @@ export default function Home() {
             <br />
             Marcel Proust
           </p>
-        </div>
-        <div className={`${styles.sixth_page}`}>
-          <Image
-            src="/img/39_doll.svg"
-            alt="1st formule"
-            width={350}
-            height={527}
-          />
-          <Image
-            src="/img/89_doll.svg"
-            alt="2nd formule"
-            width={350}
-            height={527}
-          />
         </div>
         <div className={`${styles.form}`} ref={joinUsRef} id="joinus">
           <FormControl>
@@ -532,7 +540,7 @@ export default function Home() {
               all around the world
             </Typography>
             <Image
-              src="/img/ipad_iphone_new.png"
+              src="/img/ipadiphone.png"
               alt="Worldwide Connexion"
               width={341}
               height={449}
