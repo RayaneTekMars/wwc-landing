@@ -245,7 +245,7 @@ export default function Home() {
             </div>
             <div className={`${styles.footer_first}`}>
               <div className={`${styles.app_container}`}>
-                <Link href="#">
+                <Link href="https://apps.apple.com/fr/app/worldwide-connexion/id6444213492">
                   <Image
                     src="/img/app_store_btn.svg"
                     alt="App Store"
@@ -509,7 +509,7 @@ export default function Home() {
               In 3 clicks, add your exhibitions directly in the map.
             </Typography>
             <div className={`${styles.app_buttons}`}>
-              <Link href="#">
+              <Link href="https://apps.apple.com/fr/app/worldwide-connexion/id6444213492">
                 <Image
                   src="/img/app_store_btn.svg"
                   alt="App Store"
