@@ -457,7 +457,7 @@ export default function Home() {
             </Snackbar>
           </FormControl>
           <p className={`${ibm.className} ${styles.desc}`}>
-            In order to offer a quality service to our users, your submission
+            Our platform is only accessible by invitation, in order to offer a quality service to our users, your submission
             will firstly need a quick verification <br />
             before being able to access the platform, here is the process.{" "}
             <br />
@@ -699,7 +699,7 @@ export default function Home() {
                 </Snackbar>
               </FormControl>
               <Typography className={`${ibm.className} ${styles.desc}`}>
-                In order to offer a quality service to our users, your <br />
+                Our platform is only accessible by invitation, in order to offer a quality service to our users, your <br />
                 submission will firstly need a quick verification <br />
                 before being able to access the platform, here is <br />
                 the process.
