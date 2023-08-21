@@ -253,7 +253,7 @@ export default function Home() {
                     height={52}
                   />
                 </Link>
-                <Link href="#">
+                <Link href="https://play.google.com/store/apps/details?id=com.wwc.mobile&hl=fr&gl=US">
                   <Image
                     src="/img/google_play_btn.svg"
                     alt="Google Play"
@@ -482,10 +482,10 @@ export default function Home() {
         <div className={`${styles.mobile_view}`}>
           <div className={`${styles.first_page_mobile}`}>
             <Image
-              src="/img/logo_wwc.svg"
+              src="/img/logoname.png"
               alt="Logo"
-              width={197}
-              height={52}
+              width={240}
+              height={44}
               className={`${styles.logo}`}
             />
             <Typography className={`${ibm.className} ${styles.title}`}>
@@ -493,7 +493,7 @@ export default function Home() {
               has never been this close
             </Typography>
             <Image
-              src="/img/mac_iphone_mobile.png"
+              src="/img/iphonemac.png"
               alt="Worldwide Connexion"
               width={280}
               height={233}
@@ -517,7 +517,7 @@ export default function Home() {
                   height={43}
                 />
               </Link>
-              <Link href="#">
+              <Link href="https://play.google.com/store/apps/details?id=com.wwc.mobile&hl=fr&gl=US">
                 <Image
                   src="/img/google_play_btn.svg"
                   alt="Google Play"
