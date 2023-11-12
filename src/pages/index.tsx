@@ -473,10 +473,10 @@ export default function Home() {
           <div className={`${styles.mission_container}`}>
             <div className={`${styles.mission_content}`}>
               <p className={`${styles.mission_text} ${ibm.className}`}>
-                Worldwide Connexion's mission is to connect art lovers, collectors, artists and art galleries with the aim of facilitating the discovery, promotion and purchase of works of art.
+                Worldwide Connexion&apos;s mission is to connect art lovers, collectors, artists and art galleries with the aim of facilitating the discovery, promotion and purchase of works of art.
               </p>
               <div>
-                <img src="/img/mission.jpeg" className={`${styles.mission_image}`} alt="Descriptive text for image" />
+                <Image width={1279} height={1600} src="/img/mission.jpeg" className={`${styles.mission_image}`} alt="Descriptive text for image" />
               </div>
               <ul className={`${styles.mission_list} ${ibm.className}`}>
                 <li>
@@ -514,7 +514,7 @@ export default function Home() {
                   We do not tolerate fraud, counterfeiting, misinformation or other dishonest behavior.</li>
                 <li><strong>Respect for Intellectual Property:</strong> <br />We respect the intellectual property rights of artists and galleries, and we encourage our users to do the same.
                   <br />All artwork presented on the platform must be authentic and respect copyright.</li>
-                <li><strong>Confidentiality and Data Protection:</strong> <br />We protect the confidentiality of users' personal information in accordance with applicable law.
+                <li><strong>Confidentiality and Data Protection:</strong> <br />We protect the confidentiality of users&apos; personal information in accordance with applicable law.
                   We use user data only for the purpose of providing services and ensuring a quality user experience.</li>
                 <li><strong>Mutual Respect:</strong> <br />We promote a respectful and inclusive environment where all users are treated with respect, regardless of their origin, race, religion, sexual orientation or gender identity.
                   Comments and posts should be respectful, constructive and free of harassment or hate speech.</li>
@@ -525,7 +525,7 @@ export default function Home() {
                   We are committed to minimizing our environmental impact and promoting awareness of sustainable art.</li>
                 <li><strong>Reporting Abuse:</strong> <br />We encourage users to report any behavior that is inappropriate, fraudulent, or violates this code of ethics.
                   We treat reports confidentially and take appropriate action to resolve issues.</li>
-                <li><strong>Consequences for violation of the Code of Ethics:</strong> <br />Violations of this code of ethics may result in disciplinary action, including suspension or termination of the user's account.
+                <li><strong>Consequences for violation of the Code of Ethics:</strong> <br />Violations of this code of ethics may result in disciplinary action, including suspension or termination of the user&apos;s account.
                 </li>
               </ol>
               <p className={`${styles.ethics_conclusion} ${ibm.className}`}>
@@ -784,10 +784,10 @@ export default function Home() {
             <div className={`${styles.mission_container}`}>
               <div className={`${styles.mission_content}`}>
                 <p className={`${styles.mission_text} ${ibm.className}`}>
-                  Worldwide Connexion's mission is to connect art lovers, collectors, artists and art galleries with the aim of facilitating the discovery, promotion and purchase of works of art.
+                  Worldwide Connexion&apos;s mission is to connect art lovers, collectors, artists and art galleries with the aim of facilitating the discovery, promotion and purchase of works of art.
                 </p>
                 <div>
-                  <img src="/img/mission.jpeg" className={`${styles.mission_image}`} alt="Descriptive text for image" />
+                  <Image width={1279} height={1600} src="/img/mission.jpeg" className={`${styles.mission_image}`} alt="Descriptive text for image" />
                 </div>
                 <ul className={`${styles.mission_list} ${ibm.className}`}>
                   <li>
@@ -825,7 +825,7 @@ export default function Home() {
                     We do not tolerate fraud, counterfeiting, misinformation or other dishonest behavior.</li>
                   <li><strong>Respect for Intellectual Property:</strong> <br />We respect the intellectual property rights of artists and galleries, and we encourage our users to do the same.
                     <br />All artwork presented on the platform must be authentic and respect copyright.</li>
-                  <li><strong>Confidentiality and Data Protection:</strong> <br />We protect the confidentiality of users' personal information in accordance with applicable law.
+                  <li><strong>Confidentiality and Data Protection:</strong> <br />We protect the confidentiality of users&apos; personal information in accordance with applicable law.
                     We use user data only for the purpose of providing services and ensuring a quality user experience.</li>
                   <li><strong>Mutual Respect:</strong> <br />We promote a respectful and inclusive environment where all users are treated with respect, regardless of their origin, race, religion, sexual orientation or gender identity.
                     Comments and posts should be respectful, constructive and free of harassment or hate speech.</li>
@@ -836,7 +836,7 @@ export default function Home() {
                     We are committed to minimizing our environmental impact and promoting awareness of sustainable art.</li>
                   <li><strong>Reporting Abuse:</strong> <br />We encourage users to report any behavior that is inappropriate, fraudulent, or violates this code of ethics.
                     We treat reports confidentially and take appropriate action to resolve issues.</li>
-                  <li><strong>Consequences for violation of the Code of Ethics:</strong> <br />Violations of this code of ethics may result in disciplinary action, including suspension or termination of the user's account.
+                  <li><strong>Consequences for violation of the Code of Ethics:</strong> <br />Violations of this code of ethics may result in disciplinary action, including suspension or termination of the user&apos;s account.
                   </li>
                 </ol>
                 <p className={`${styles.ethics_conclusion} ${ibm.className}`}>
