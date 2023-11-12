@@ -281,6 +281,106 @@
     height: 70vh;
   }
 
+  .mission_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+  }
+
+  .mission_image {
+    width: 45%;
+    height: auto;
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .mission_container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .mission_right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 50%;
+    }
+
+    .mission_left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+    }
+  }
+
+  .mission_title {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+
+  .mission_content {
+    font-size: 1.5rem;
+    color: #666;
+  }
+
+  .mission_text {
+    margin-bottom: 2rem;
+  }
+
+  .mission_list {
+    list-style-type: none;
+    padding: 0;
+    text-align: justify;
+  }
+
+  .mission_list li {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .code_of_ethics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+  }
+
+  .ethics_container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .ethics_title {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+
+  .ethics_content {
+    font-size: 1.5rem;
+    color: #666;
+  }
+
+  .ethics_intro,
+  .ethics_conclusion {
+    margin-bottom: 2rem;
+  }
+
+  .ethics_list {
+    list-style-type: decimal;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .ethics_list li {
+    margin-bottom: 1rem;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
@@ -564,6 +664,14 @@
       display: none;
     }
 
+    .mission_page {
+      display: none;
+    }
+
+    .code_of_ethics {
+      display: none;
+    }
+
     .form {
       display: none;
     }
@@ -736,14 +844,14 @@
           }
         }
       }
-      
+
       .fifth_page_mobile {
         display: flex;
         flex-direction: column;
         height: 80vh;
         width: 100vw;
         align-items: center;
-        
+
         .title {
           font-size: 2rem;
           font-weight: 400;
@@ -789,14 +897,14 @@
           align-items: center;
           width: auto;
           margin-bottom: 3rem;
-      
+
           .title {
             color: #000000;
             font-size: 1.3rem;
             font-weight: 400;
             margin-bottom: 1.5rem;
           }
-      
+
           .input {
             height: 40px;
             width: 250px;
@@ -812,7 +920,7 @@
             border: 1px solid rgba(0, 0, 0, 0.5);
             align-self: center;
           }
-      
+
           .invalid_text {
             color: #ff0000;
             font-size: 0.9rem;
@@ -822,7 +930,7 @@
             margin-top: -0.7rem;
             margin-bottom: 0.5rem;
           }
-      
+
           .invalid_input {
             height: 40px;
             width: 250px;
@@ -836,7 +944,7 @@
             border: 1px solid rgba(254, 77, 77, 0.3);
             align-self: center;
           }
-      
+
           .button {
             height: 40px;
             width: 150px;
@@ -849,11 +957,11 @@
             margin-bottom: 4rem;
             margin-top: 1rem;
           }
-      
+
           .button:hover {
             background-color: #313131;
           }
-      
+
           .desc {
             color: #000000;
             font-size: 0.9rem;
@@ -869,6 +977,105 @@
             font-weight: 400;
             margin-top: 1rem;
           }
+        }
+      }
+
+      .mission_page_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+
+        .mission_image {
+          align-self: center;
+          width: 100%;
+          height: auto;
+        }
+
+        .mission_container {
+          width: 80%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .mission_right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 50%;
+          }
+
+          .mission_left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 50%;
+          }
+        }
+
+        .mission_title {
+          font-size: 1.3rem;
+          color: #000;
+          margin-bottom: 2rem;
+        }
+
+        .mission_content {
+          font-size: 1rem;
+          color: #666;
+          align-items: center;
+        }
+
+        .mission_text {
+          margin-bottom: 2rem;
+        }
+
+        .mission_list {
+          list-style-type: none;
+          padding: 0;
+          text-align: justify;
+        }
+
+        .mission_list li {
+          text-align: left;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .code_of_ethics_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+
+        .ethics_container {
+          width: 80%;
+          text-align: center;
+        }
+
+        .ethics_title {
+          font-size: 1.3rem;
+          color: #000;
+          margin-bottom: 2rem;
+        }
+
+        .ethics_content {
+          font-size: 1rem;
+          color: #666;
+        }
+
+        .ethics_intro,
+        .ethics_conclusion {
+          margin-bottom: 2rem;
+        }
+
+        .ethics_list {
+          list-style-type: decimal;
+          text-align: left;
+          margin-bottom: 2rem;
+        }
+
+        .ethics_list li {
+          margin-bottom: 1rem;
         }
       }
 

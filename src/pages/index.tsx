@@ -468,6 +468,72 @@ export default function Home() {
             3. Ready for subscription
           </p>
         </div>
+        <div className={`${styles.mission_page}`} id="mission_page">
+          <h1 className={`${styles.mission_title} ${ibm.className}`}>Our Mission</h1>
+          <div className={`${styles.mission_container}`}>
+            <div className={`${styles.mission_content}`}>
+              <p className={`${styles.mission_text} ${ibm.className}`}>
+                Worldwide Connexion's mission is to connect art lovers, collectors, artists and art galleries with the aim of facilitating the discovery, promotion and purchase of works of art.
+              </p>
+              <div>
+                <img src="/img/mission.jpeg" className={`${styles.mission_image}`} alt="Descriptive text for image" />
+              </div>
+              <ul className={`${styles.mission_list} ${ibm.className}`}>
+                <li>
+                  <strong>Promotion of art and artists</strong>:<br />The platform aims to highlight the work of artists, offering them a space to exhibit their works and providing detailed information on their artistic journey and influences.
+                  <br /> It also allows art galleries to promote their programming, organize online exhibitions and reach a global audience.
+                </li>
+                <li>
+                  <strong>Discovery and accessibility</strong>:<br />Worldwide Connexion allows art lovers to discover a wide range of artwork, from painting to sculpture, photography, digital art, and much more.
+                  <br />It offers an immersive experience that allows visitors to browse and explore galleries from around the world, and discover new artistic talents.
+                </li>
+                <li>
+                  <strong>Transparency and information</strong>:<br />On Worldwide Connexion galleries can provide detailed information about each work, including descriptions, dimensions, mediums used.
+                  <br />Users can also access information about upcoming exhibitions and art events.
+                </li>
+                <li>
+                  <strong>Community and education</strong>:<br />By fostering communication between art lovers, collectors and artists, Worldwide Connexion encourages the creation of an online artistic community.
+                  <br />We will also be able to offer educational resources, such as articles, videos, guides and online courses, to help visitors deepen their understanding of art and its various forms.
+                </li>
+                <li>
+                  <strong>Facilitating international transactions</strong>:<br />By enabling art galleries and artists to reach a global audience, the platform facilitates international transactions, thereby contributing to the dissemination of art internationally.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={`${styles.code_of_ethics}`} id="code_of_ethics">
+          <div className={`${styles.ethics_container}`}>
+            <h1 className={`${styles.ethics_title} ${ibm.className}`}>Code of Ethics</h1>
+            <div className={`${styles.ethics_content}`}>
+              <p className={`${styles.ethics_intro} ${ibm.className}`}>
+                Worldwide Connexion is committed to fostering an online community that fosters the discovery, promotion, and purchase of art, while maintaining high ethical standards. This Code of Ethics establishes the fundamental principles that guide our mission and the behaviors expected of all users of the platform.
+              </p>
+              <ol className={`${styles.ethics_list} ${ibm.className}`}>
+                <li><strong>Integrity and Honesty:</strong> <br />We are committed to maintaining the highest integrity in all our interactions with artists, galleries, buyers and visitors to the platform.
+                  We do not tolerate fraud, counterfeiting, misinformation or other dishonest behavior.</li>
+                <li><strong>Respect for Intellectual Property:</strong> <br />We respect the intellectual property rights of artists and galleries, and we encourage our users to do the same.
+                  <br />All artwork presented on the platform must be authentic and respect copyright.</li>
+                <li><strong>Confidentiality and Data Protection:</strong> <br />We protect the confidentiality of users' personal information in accordance with applicable law.
+                  We use user data only for the purpose of providing services and ensuring a quality user experience.</li>
+                <li><strong>Mutual Respect:</strong> <br />We promote a respectful and inclusive environment where all users are treated with respect, regardless of their origin, race, religion, sexual orientation or gender identity.
+                  Comments and posts should be respectful, constructive and free of harassment or hate speech.</li>
+                <li><strong>Transparency and Authenticity:</strong> <br />We encourage transparency in all transactions, providing clear information about artwork, prices, fees and terms of sale.
+                  Descriptions of works must be authentic, accurate and complete.
+                </li>
+                <li><strong>Social and Environmental Responsibility:</strong> <br />We support ethical and sustainable practices in the art world and encourage our users to do the same.
+                  We are committed to minimizing our environmental impact and promoting awareness of sustainable art.</li>
+                <li><strong>Reporting Abuse:</strong> <br />We encourage users to report any behavior that is inappropriate, fraudulent, or violates this code of ethics.
+                  We treat reports confidentially and take appropriate action to resolve issues.</li>
+                <li><strong>Consequences for violation of the Code of Ethics:</strong> <br />Violations of this code of ethics may result in disciplinary action, including suspension or termination of the user's account.
+                </li>
+              </ol>
+              <p className={`${styles.ethics_conclusion} ${ibm.className}`}>
+                This Code of Ethics is designed to ensure that our platform remains a respectful, transparent, and ethical online art space for everyone. All users are encouraged to respect these principles and contribute to the creation of a positive and enriching online artistic community.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className={`${styles.footer}`}>
           <Link href={"/tos"}>
             <p className={`${ibm.className}`}>Terms and conditions</p>
@@ -713,6 +779,72 @@ export default function Home() {
               </Typography>
             </div>
           </div>
+          <div className={`${styles.mission_page_mobile}`} id="mission_page_mobile">
+            <h1 className={`${styles.mission_title} ${ibm.className}`}>Our Mission</h1>
+            <div className={`${styles.mission_container}`}>
+              <div className={`${styles.mission_content}`}>
+                <p className={`${styles.mission_text} ${ibm.className}`}>
+                  Worldwide Connexion's mission is to connect art lovers, collectors, artists and art galleries with the aim of facilitating the discovery, promotion and purchase of works of art.
+                </p>
+                <div>
+                  <img src="/img/mission.jpeg" className={`${styles.mission_image}`} alt="Descriptive text for image" />
+                </div>
+                <ul className={`${styles.mission_list} ${ibm.className}`}>
+                  <li>
+                    <strong>Promotion of art and artists</strong>:<br />The platform aims to highlight the work of artists, offering them a space to exhibit their works and providing detailed information on their artistic journey and influences.
+                    <br /> It also allows art galleries to promote their programming, organize online exhibitions and reach a global audience.
+                  </li>
+                  <li>
+                    <strong>Discovery and accessibility</strong>:<br />Worldwide Connexion allows art lovers to discover a wide range of artwork, from painting to sculpture, photography, digital art, and much more.
+                    <br />It offers an immersive experience that allows visitors to browse and explore galleries from around the world, and discover new artistic talents.
+                  </li>
+                  <li>
+                    <strong>Transparency and information</strong>:<br />On Worldwide Connexion galleries can provide detailed information about each work, including descriptions, dimensions, mediums used.
+                    <br />Users can also access information about upcoming exhibitions and art events.
+                  </li>
+                  <li>
+                    <strong>Community and education</strong>:<br />By fostering communication between art lovers, collectors and artists, Worldwide Connexion encourages the creation of an online artistic community.
+                    <br />We will also be able to offer educational resources, such as articles, videos, guides and online courses, to help visitors deepen their understanding of art and its various forms.
+                  </li>
+                  <li>
+                    <strong>Facilitating international transactions</strong>:<br />By enabling art galleries and artists to reach a global audience, the platform facilitates international transactions, thereby contributing to the dissemination of art internationally.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.code_of_ethics_mobile}`} id="code_of_ethics_mobile">
+            <div className={`${styles.ethics_container}`}>
+              <h1 className={`${styles.ethics_title} ${ibm.className}`}>Code of Ethics</h1>
+              <div className={`${styles.ethics_content}`}>
+                <p className={`${styles.ethics_intro} ${ibm.className}`}>
+                  Worldwide Connexion is committed to fostering an online community that fosters the discovery, promotion, and purchase of art, while maintaining high ethical standards. This Code of Ethics establishes the fundamental principles that guide our mission and the behaviors expected of all users of the platform.
+                </p>
+                <ol className={`${styles.ethics_list} ${ibm.className}`}>
+                  <li><strong>Integrity and Honesty:</strong> <br />We are committed to maintaining the highest integrity in all our interactions with artists, galleries, buyers and visitors to the platform.
+                    We do not tolerate fraud, counterfeiting, misinformation or other dishonest behavior.</li>
+                  <li><strong>Respect for Intellectual Property:</strong> <br />We respect the intellectual property rights of artists and galleries, and we encourage our users to do the same.
+                    <br />All artwork presented on the platform must be authentic and respect copyright.</li>
+                  <li><strong>Confidentiality and Data Protection:</strong> <br />We protect the confidentiality of users' personal information in accordance with applicable law.
+                    We use user data only for the purpose of providing services and ensuring a quality user experience.</li>
+                  <li><strong>Mutual Respect:</strong> <br />We promote a respectful and inclusive environment where all users are treated with respect, regardless of their origin, race, religion, sexual orientation or gender identity.
+                    Comments and posts should be respectful, constructive and free of harassment or hate speech.</li>
+                  <li><strong>Transparency and Authenticity:</strong> <br />We encourage transparency in all transactions, providing clear information about artwork, prices, fees and terms of sale.
+                    Descriptions of works must be authentic, accurate and complete.
+                  </li>
+                  <li><strong>Social and Environmental Responsibility:</strong> <br />We support ethical and sustainable practices in the art world and encourage our users to do the same.
+                    We are committed to minimizing our environmental impact and promoting awareness of sustainable art.</li>
+                  <li><strong>Reporting Abuse:</strong> <br />We encourage users to report any behavior that is inappropriate, fraudulent, or violates this code of ethics.
+                    We treat reports confidentially and take appropriate action to resolve issues.</li>
+                  <li><strong>Consequences for violation of the Code of Ethics:</strong> <br />Violations of this code of ethics may result in disciplinary action, including suspension or termination of the user's account.
+                  </li>
+                </ol>
+                <p className={`${styles.ethics_conclusion} ${ibm.className}`}>
+                  This Code of Ethics is designed to ensure that our platform remains a respectful, transparent, and ethical online art space for everyone. All users are encouraged to respect these principles and contribute to the creation of a positive and enriching online artistic community.
+                </p>
+              </div>
+            </div>
+          </div>
           <div className={`${styles.footer_mobile}`}>
             <Link href="/tos">
               <Typography className={`${ibm.className} ${styles.footer_text}`}>
@@ -727,7 +859,7 @@ export default function Home() {
             </Typography>
           </div>
         </div>
-      </main>
+      </main >
     </>
   );
 }
