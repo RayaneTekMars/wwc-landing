@@ -319,12 +319,14 @@
 
   .mission_title {
     font-size: 3rem;
+    font-weight: 500;
     color: #000;
     margin-bottom: 2rem;
   }
 
   .mission_content {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
     color: #666;
   }
 
@@ -336,6 +338,10 @@
     list-style-type: none;
     padding: 0;
     text-align: justify;
+  }
+
+  .mission_list strong {
+    font-weight: 500;
   }
 
   .mission_list li {
@@ -357,12 +363,14 @@
 
   .ethics_title {
     font-size: 3rem;
+    font-weight: 500;
     color: #000;
     margin-bottom: 2rem;
   }
 
   .ethics_content {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
     color: #666;
   }
 
@@ -375,6 +383,10 @@
     list-style-type: decimal;
     text-align: left;
     margin-bottom: 2rem;
+  }
+
+  .ethics_list strong {
+    font-weight: 500;
   }
 
   .ethics_list li {

@@ -472,7 +472,6 @@ export default function Home() {
           <div style={{
             display: "flex",
             flexDirection: "column",
-            gap: "10px",
           }}>
             <Link href={"/tos"}>
               <p className={`${ibm.className}`}>Terms and conditions</p>
