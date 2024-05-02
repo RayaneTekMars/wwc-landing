@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../../styles/Policies.module.scss";
 import { Raleway } from "next/font/google";
 import Header from "@/components/Header";
+import React from "react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 

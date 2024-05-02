@@ -1,13 +1,9 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.scss";
-import { Raleway } from "next/font/google";
-import Image from "next/image";
 import { IBM_Plex_Sans_Devanagari, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { Typography } from "@mui/material";
-
-const raleway = Raleway({ subsets: ["latin"] });
 
 const ibm = IBM_Plex_Sans_Devanagari({
   subsets: ["latin"],
