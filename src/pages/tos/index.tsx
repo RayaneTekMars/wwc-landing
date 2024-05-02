@@ -23,7 +23,7 @@ export default function Policies() {
         </div>
         <div className={styles.tos_text_container}>
           <iframe
-            src="tos.html"
+            src="terms.html"
             width="100%"
             height="500"
             style={{ border: "none", borderRadius: "5px" }}
