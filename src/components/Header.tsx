@@ -7,10 +7,10 @@ const Header = (): JSX.Element => {
     <header className={styles.header}>
       <Link href="/">
         <Image
-          src="/img/logo_wwc.png"
-          alt="Worldwide Connexion"
-          width={350}
-          height={57}
+          src="/img/cubartblue.png"
+          alt="Cubart logo"
+          width={112}
+          height={112}
         />
       </Link>
     </header>

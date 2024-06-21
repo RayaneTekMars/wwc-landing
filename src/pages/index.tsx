@@ -98,7 +98,7 @@ export default function Home() {
       const docRef = await addDoc(
         collection(database, "registrationLandingPage"),
         {
-          to: "pro@worldwideconnexion.com",
+          to: "worldwideconnexion.contact@gmail.com",
           message: {
             subject: "New registration from " + formData.companyName,
             html: `
@@ -188,14 +188,14 @@ export default function Home() {
   };
 
   function handleLoginClick() {
-    window.location.href = "https://pro.worldwideconnexion.com/";
+    window.location.href = "https://cubartmap.com/";
   }
 
   return (
     <>
       <Head>
-        <title>Worldwide Connexion</title>
-        <meta name="description" content="Worldwide Connexion landing page" />
+        <title>Cubart</title>
+        <meta name="description" content="Cubart landing page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -487,16 +487,16 @@ export default function Home() {
             contact us at contact@worldwideconnexion.com
           </p>
           <p className={`${ibm.className}`}>
-            Copyright 2023 Worldwide Connexion
+            Copyright 2024 Cubart
           </p>
         </div>
         <div className={`${styles.mobile_view}`}>
           <div className={`${styles.first_page_mobile}`}>
             <Image
-              src="/img/logoname.png"
+              src="/img/cubartblue.png"
               alt="Logo"
-              width={240}
-              height={44}
+              width={70}
+              height={70}
               className={`${styles.logo}`}
             />
             <Typography className={`${ibm.className} ${styles.title}`}>
@@ -744,7 +744,7 @@ export default function Home() {
               contact us : contact@worldwideconnexion.com
             </Typography>
             <Typography className={`${ibm.className} ${styles.footer_text}`}>
-              © 2023 Worldwide Connexion. All rights reserved.
+              © 2024 Cubart. All rights reserved.
             </Typography>
           </div>
         </div>
